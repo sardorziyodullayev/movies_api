@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Movies API</title>
+		<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+	</head>
+	<body>
+		<!-- MAIN -->
+		<main>
+			<section class="movie">
+				<div class="movie__conrainer container">
+					<h2 class="movie__title text-center fw-bold text-light py-4">Search movie</h2>
+					<div class="movie__inner p-4">
+						<form class="movie__form mb-4 d-flex" autocomplete="off">
+							<input
+								class="movie__input w-25 me-3 form-control"
+								type="text"
+								name="user-search"
+								placeholder="search movie...."
+								required
+							/>
+
+							<button class="btn text-white butttt" type="submit">
+								Search
+							</button>
+						</form>
+
+						<ul
+							class="movie__result-list list-unstyled m-0 d-flex flex-wrap justify-content-center justify-content-sm-evenly"
+						></ul>
+					</div>
+				</div>
+
+				<ul class="bookmark-list list-unstyled list-group">
+					<!-- <li class="list-group-item-action py-2 bg-danger bg-opacity-10">salom</li> -->
+				</ul>
+
+				<!--START SPINNER -->
+				<div
+					class="movie__spinner spinner-border text-danger position-absolute top-0 end-0 bottom-0 start-0 m-auto d-none"
+					role="status"
+					style="width: 3rem; height: 3rem"
+				></div>
+				<!--END SPINNER -->
+
+				<!--START MODAL -->
+				<!-- Button trigger modal -->
+				<button
+					type="button"
+					class="btn btn-primary d-none"
+					data-bs-toggle="modal"
+					data-bs-target="#exampleModal">
+				</button>
+
+				<!-- Modal -->
+				<div
+					class="modal fade  movie__modal"
+					id="exampleModal"
+					tabindex="-1"
+					aria-labelledby="exampleModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog movie__modal-inner"></div>
+				</div>
+				<!--END MODAL -->
+			</section>
+		</main>
+
+		<!--START TEMPLATE -->
+		<template id="movie__template">
+			<li class="movie__item card w-25 ms-sm-4 mb-4 bg-light">
+				<img
+					class="movie__img-poster card-img-top rounded position-relative"
+					src=""
+					alt=""
+					width="230"
+					height="300"
+				/>
+				<div class="card-body">
+					<h4 class="movie__card-title text-dark"></h4>
+				</div>
+				<button
+					type="button"
+					class="btn btn-primary movie__more-info"
+					data-bs-toggle="modal"
+					data-bs-target="#exampleModal"
+				>
+					More info
+				</button>
+				<!-- <button class="movie__more-info btn btn-danger" type="button">
+					More info
+				</button> -->
+				<!-- <button class="bookmark mt-4 btn border">Bookmark +</button> -->
+			</li>
+		</template>
+		<!--END TEMPLATE -->
+
+		<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

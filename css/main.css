@@ -1,0 +1,22 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: sans-serif;
+   background-color: #22254b;
+}
+
+.movie__inner {
+   background-color: #373b69;
+}
+
+.btn{
+   background-color: #22254b;
+}
+
+.modal{
+   background-color: #373b69;
+}
